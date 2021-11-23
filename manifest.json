@@ -1,0 +1,33 @@
+{
+    "name": "Hover to pause/play",
+    "version": "0.0.0.1",
+    "manifest_version": 2,
+    "description": "A Chromium extension for Hover to pause/play.",
+    "icons": {
+        "16": "icons/icon16.png"
+    },
+    "browser_action": {
+        "default_popup": "popup/main.html"
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab",
+        "scripting",
+        "storage",
+        "*://www.youtube.com/*",
+        "*://www.twitch.tv/*"
+      ],
+      "commands": {
+        "toggle-feature": {
+          "suggested_key": { "default": "Ctrl+Shift+Y" },
+          "description": "Send a 'toggle-feature' event to the extension"
+        },
+        "_execute_browser_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+          }
+        }
+      }
+}
